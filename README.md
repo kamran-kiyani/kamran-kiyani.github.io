@@ -1,2 +1,2 @@
 # s15
-Functional code for the latest version of the LMS
+This respository contains work for DGMD S-15 at Harvard.
