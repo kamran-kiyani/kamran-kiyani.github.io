@@ -1,10 +1,82 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<title>Kamran Kiyani's Github Page</title>
+	<meta charset="utf-8">
+	<title>Kamran Kiyani's DGMD S-15 Project Page</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="css/styles.css">
+	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script src="js/grids.min.js"></script>
+	<script>
+		// Picture element HTML5 shiv
+		document.createElement( "picture" );
+		jQuery(function($) {
+			$('.col-1-2').responsiveEqualHeightGrid();	
+		});
+	</script>
+	<script src="js/picturefill.min.js" async></script>
 </head>
 <body>
-	<h1>Github Test</h1>
+	<div class="container">
+		<div class="row">
+			<header class="col-4">
+				<h1>DGMD S-15 Projects</h1>
+			</header>
+		</div>
+		<div class="row">
+			<nav class="col-4">
+				<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="about.html">Doodloo</a></li>
+				<li><a href="stories.html">Umm Counter</a></li>
+				<li><a href="#">History</a></li>
+				<li><a href="#">County</a></li>
+				</ul>
+			</nav>
+		</div>
+		<div class="row">
+			<main class="col-4">
+				<picture>
+					<source srcset="img/village_street-400.jpg" media="(min-width: 1014px)">
+					<source srcset="img/village_street-300.jpg" media="(min-width: 702px) and (max-width: 1013px)">
+					<img srcset="img/village_street-188.jpg" alt="Saidpur Village.">
+				</picture>
+				<h2>Projects, Peers, Passion and Play</h2>
+				<p><i>"Building Canvases for Play"</i></p>
+				<p>Quote from Dr. Seymour Pappert</p>
+			</main>
+		</div>
+		<section class="row">
+			<article class="col-1-2">
+				<h3>Doodloo</h3>
+			    <img src="img/caravan-225.jpg" alt="The caravan stops.">
+			    <p>A canvas for play</p>
+			    <p><a href="#" target="_blank">Read more &gt;&gt;</a></p>
+			</article>
+			<article class="col-1-2">
+		    	<h3>Umm Counter</h3>
+		    	<img src="img/lahore_bazaar-225.jpg" alt="The open market at the eastern gate of Lahore.">
+		    	<p>An app that analyzes your speech for fillers</p>
+		    	<p><a href="#" target="_blank">Read more &gt;&gt;</a></p>
+		    </article>
+		    <article class="col-1-2">
+		    	<h3>History</h3>
+		    	<img src="img/rider-225.jpg" alt="The chief rides.">
+		    	<p>See the timeline of images taken at your location.</p>
+		    	<p><a href="#" target="_blank">Read more &gt;&gt;</a></p>
+		    </article>
+		    <article class="col-1-2">
+		    	<h3>County</h3>
+		    	<img src="img/horsemen-225.jpg" alt="Arlington Water Tower." class="img-responsive">
+		    	<p>Snap together a robot and play with it</p>
+		    	<p><a href="#" target="_blank">Read more &gt;&gt;</a></p>
+		    </article>
+	    </section>
+	    <div class="row">
+		    <footer class="col-4">
+		    	<p>&copy; 2015 Kamran Kiyani.</p>
+		    </footer>
+		</div>
+	</div>
 </body>
 </html>

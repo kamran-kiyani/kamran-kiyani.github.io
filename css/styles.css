@@ -1,0 +1,276 @@
+@import url(../css/normalize.css);
+@import "http://fonts.googleapis.com/css?family=Cabin+Condensed:500";
+/* Border box declaration */
+html {
+  box-sizing: border-box;
+}
+
+/* inherit border-box on all elements in the universe and before and after */
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: Arial, Geneva, sans-serif;
+  background-color: grey;
+  font-size: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Cabin condensed", sans-serif;
+}
+
+a {
+  color: grey;
+}
+
+.container {
+  width: 97%;
+  max-width: 1200px;
+  margin: 0 auto;
+  float: none;
+  background-color: #fff;
+}
+
+header {
+  width: 100%;
+  height: 230px;
+  font-family: "Cabin condensed", sans-serif;
+  color: black;
+}
+header h1 {
+  padding: 0.5em;
+  margin: 0;
+}
+header h1 a {
+  text-decoration: none;
+}
+
+nav {
+  background-color: #c93;
+}
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  overflow: auto;
+}
+nav ul li {
+  font-family: "Cabin condensed", sans-serif;
+}
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 1em;
+  float: left;
+}
+nav ul li a:hover {
+  color: #a16100;
+}
+
+main {
+  overflow: auto;
+  padding-right: 3em;
+  background-color: #EFECCA;
+}
+
+main h2 {
+  font-size: 2em;
+  padding-top: 0.1em;
+  padding-bottom: 0.1em;
+  margin: 0.2em;
+}
+
+main p {
+  font-size: 1.2em;
+  font-family: "Cabin condensed", sans-serif;
+  margin: 0.2em;
+}
+
+main img {
+  float: left;
+  margin-right: 1.875em;
+  width: auto;
+}
+
+article img {
+  float: right;
+  margin-left: 1.875em;
+  width: 100%;
+  max-width: 300px;
+}
+
+.row article img {
+  float: none;
+  margin-left: 0;
+  max-width: 225px;
+}
+
+aside.col-1-4 {
+  background-color: grey;
+  padding: 0 0.5em;
+}
+
+aside ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+aside li {
+  margin: 0 0 2em 0;
+  border: 1px solid #999;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  border-radius: 3px;
+  background-color: #cccccc;
+  padding: 0.75em;
+  font-family: Georgia, Times, serif;
+  font-style: italic;
+}
+aside li a {
+  color: black;
+}
+
+blockquote {
+  font-family: Georgia, Times, serif;
+  font-style: italic;
+  font-size: 0.8em;
+}
+blockquote cite {
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-size: 0.75em;
+}
+blockquote cite::before {
+  content: "\2014  ";
+}
+
+footer {
+  padding: 2em 0;
+  margin: 3em 0;
+  color: #fff;
+  background-color: #9a9a9a;
+  text-align: center;
+}
+footer:before, footer:after {
+  content: "";
+  display: table;
+}
+footer:after {
+  clear: both;
+}
+
+.row::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.col-1-2,
+.col-1-4, .col-2, .col-3, .col-4 {
+  float: left;
+  margin-left: 3.33333%;
+  min-height: 1px;
+  position: relative;
+}
+
+.col-1-2,
+.col-1-4 {
+  width: 20.83333%;
+}
+
+.col-2 {
+  width: 44.99999%;
+}
+
+.col-3 {
+  width: 69.16666%;
+}
+
+.col-4 {
+  width: 93.33333%;
+  margin-right: 3.33333%;
+}
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  .col-1-2,
+  .col-2 {
+    width: 44.99999%;
+  }
+
+  .col-1-4,
+  .col-3,
+  .col-4 {
+    width: 93.33333%;
+  }
+}
+@media only screen and (max-width: 479px) {
+  [class*='col-'] {
+    margin: 0;
+    width: 100%;
+    margin-bottom: 1%;
+  }
+}
+@media only screen and (min-width: 702px) and (max-width: 866px) {
+  main h2 {
+    font-size: 1.5em;
+    padding-top: 0;
+  }
+
+  main p {
+    font-size: 1em;
+  }
+}
+@media only screen and (max-width: 701px) {
+  main {
+    padding: 0 3.33333%;
+  }
+
+  main h2 {
+    font-size: 1em;
+  }
+
+  main p {
+    font-size: 0.8em;
+  }
+
+  main img {
+    float: none;
+    margin: 0;
+  }
+
+  nav ul a {
+    display: block;
+    float: none;
+  }
+
+  nav li {
+    width: 50%;
+    float: left;
+  }
+
+  header {
+    background: url(../img/title-710.jpg) no-repeat;
+    height: 149px;
+  }
+
+  header h1 {
+    margin: 0;
+    font-size: 1.6em;
+  }
+}
+@media only screen and (min-width: 702px) {
+  header {
+    background: url(../img/title-1200.jpg) no-repeat;
+  }
+}

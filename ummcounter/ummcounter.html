@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>The Umm counter</title>
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+</head>
+<body>
+	<h1>Welcome to the Umm Counter Application</h1>
+	<p>This web application processes your speech and helps you find ways to make yourself sound more articulate.</p>
+	<form action="counter.html" method="post" enctype="application/x-www-form-urlencoded">
+
+		<fieldset>
+			<legend>Test your microphone </legend>
+			<p>Please click the “Test” button to make sure that your microphone is working correctly.</p>
+			<button type="submit" id="microphonetest" name="testbutton" value="microphone test">Test</button>
+		</fieldset>
+
+
+		<fieldset>
+			<legend>Choose your filters</legend>
+			<input type="checkbox" id="cboxfillers" name="fillers" value="fillers">
+			<label for="cboxfillers">Fillers</label> <br>
+			<input type="checkbox" id="cboxinterrog" name="interrog" value="interrog">
+			<label for="cboxinterrog">Interrogative Intonation</label> <br>
+			<input type="checkbox" id="cboxfrench" name="french" value="french">
+			<label for="cboxfrench">Swear Words</label>
+		</fieldset>
+
+
+		<button type="submit" id="start" name="startbutton" value="start button">Start</button>
+
+	</form>
+</body>
+</html>
