@@ -39,8 +39,8 @@ function FindBlobs(src) {  //function taken from http://blog.acipo.com/blob-dete
 
     // We leave a 1 pixel border which is ignored so we do not get array
     // out of bounds errors
-    for( y = 1; y < ySize - 1; y++){
-      for( x = 1; x < xSize - 1; x++){
+    for( y = 1; y < ySize - 1; y++) {
+      for( x = 1; x < xSize - 1; x++) {
 
         pos = ( y * xSize + x) * 4;
 
@@ -99,7 +99,9 @@ function FindBlobs(src) {  //function taken from http://blog.acipo.com/blob-dete
   
       }
     }
-  
+
+    // console.log(blobMap[6]);
+
     // Compress the table of labels so that every location refers to only 1
     // matching location
     var i = labelTable.length;

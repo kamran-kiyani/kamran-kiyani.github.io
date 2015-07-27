@@ -105,6 +105,8 @@ function imgTesting_onload() {
         }
       }
 
+      // console.log(width, height);
+
     // creating a context and drawing the image on canvas
     c.width = width;
     c.height = height;
@@ -112,7 +114,7 @@ function imgTesting_onload() {
     ctx.drawImage(myImg, 0, 0, width, height);
 
 
-    // console.log(width, height);
+    
 
     // extracting image data
     imgData = ctx.getImageData(0, 0, c.width, c.height);
@@ -124,9 +126,12 @@ function imgTesting_onload() {
 
     // Using FindBlob to build a database of relevant pixels
     labelMap = FindBlobs(imgData);
-    // console.log(labelMap);
+    // console.log("imgData length: " + imgData.data.length);
+    // console.log("labelMap length: " + labelMap.length);
     // console.log("Label Map Length: " + labelMap.length);
     // console.log("Image Width: " + width);
+    // console.log(labelMap[6]);
+
     // getting data for the outer boundary of a set of pixels
 
     // Drawing the polyline
