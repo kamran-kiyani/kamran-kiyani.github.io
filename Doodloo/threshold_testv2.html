@@ -7,7 +7,7 @@
   <script type="text/javascript" src="js/snap.svg-min.js"></script>
   <script type="text/javascript" src="js/convexHull.js"></script>
   <script type="text/javascript" src="js/drawSVG.js"></script>
-  <script type="text/javascript" src="js/FindBlob.js"></script>
+  <script type="text/javascript" src="js/FindBlob.js"></script> 
 </head>
 
 <body>
@@ -17,7 +17,7 @@
 <span id='empty'></span>
 <!-- <button id='extract'>Extract</button> -->
 <br>
-<canvas id='viewport' style='border:1px solid #AAA;height:200px;width:200px;display:block;'></canvas>
+<canvas id='viewport' style='border:1px solid #AAA;display:block;'></canvas>
 <script>
 
 
@@ -93,17 +93,17 @@ function imgTesting_onload() {
   var width = myImg.width;
   var height = myImg.height;
   console.log(width + " " + height);
-      if (width > height) {
-        if (width > MAX_WIDTH) {
-          height *= MAX_WIDTH / width;
-          width = MAX_WIDTH;
-        }
-      } else {
-        if (height > MAX_HEIGHT) {
-          width *= MAX_HEIGHT / height;
-          height = MAX_HEIGHT;
-        }
-      }
+      // if (width > height) {
+      //   if (width > MAX_WIDTH) {
+      //     height *= MAX_WIDTH / width;
+      //     width = MAX_WIDTH;
+      //   }
+      // } else {
+      //   if (height > MAX_HEIGHT) {
+      //     width *= MAX_HEIGHT / height;
+      //     height = MAX_HEIGHT;
+      //   }
+      // }
 
       // console.log(width, height);
 
@@ -112,7 +112,7 @@ function imgTesting_onload() {
     c.height = height;
     var ctx = c.getContext("2d");
     ctx.drawImage(myImg, 0, 0, width, height);
-
+ 
 
     
 
@@ -136,12 +136,13 @@ function imgTesting_onload() {
 
     // Drawing the polyline
     var poly = convexHull(labelMap);
-    drawSVG(poly);
+    drawSVG(poly, height, width);
+    drawSecondSVG(poly);
 
 }
 
 myImg.onload = CreateDelegate(myImg, imgTesting_onload);
-myImg.src =  "hand_drawn_circle.png";
+myImg.src =  "img/hand_drawn_circle.png";
 
 
 // get the x,y coordinates for a given pixel index when provided with the width of the image
@@ -157,11 +158,11 @@ function getXY(i, imageWidth) {
 // Removes the areas of the image that are not associated with the user's drawing
 
 function isolate() {
-
+var r, g, b, a;
     // get pixel values    
 
     for (var i = 0; i < imgData.data.length; i = i + 4) {
-
+      r, g, b, a = 0;
     	// extract individual channel values, r=red, g=green, b=blue, a=alpha
     	r = imgData.data[i];
     	g = imgData.data[i + 1];

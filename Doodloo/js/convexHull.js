@@ -2,11 +2,25 @@ function convexHull(labelMap) {
     var convexHull = new ConvexHullGrahamScan();
     // console.log(labelMap[20].length);
     var x, y;
-    for(var i = 0; i < labelMap.length; i++) {
-        var label = labelMap[i];
-        for(var j = 0; j < label.length; j++) {
 
-            if ( label[j] != 0) {
+    // for(var i = 0; i < labelMap.length; i++) {
+    //     var label = labelMap[i]; 
+    //     for(var j = 0; j < label.length; j++) {
+
+    //         if ( label[j] != 0) {
+    //         // console.log(labelMap[i] + ":" + i);
+    //             //add points (needs to be done for each point, a foreach loop on the input array can be used.)
+    //             // x = getXY(i, width)[0];
+    //             // y = getXY(i, width)[1];
+    //             convexHull.addPoint(j, i);
+    //         }
+    //     }
+    // }    
+
+    for(var i = 0; i < labelMap.length; i++) {
+        for(var j = 0; j < labelMap[i].length; j++) {
+
+            if ( labelMap[i][j] != 0) {
             // console.log(labelMap[i] + ":" + i);
                 //add points (needs to be done for each point, a foreach loop on the input array can be used.)
                 // x = getXY(i, width)[0];
@@ -14,9 +28,9 @@ function convexHull(labelMap) {
                 convexHull.addPoint(j, i);
             }
         }
-    }    
+    } 
 
-    //getHull() returns the array of points that make up the convex hull.
+    //getHull() returns the array of points that make up the convex hull. 
     var hullPoints = convexHull.getHull();
     // console.log(hullPoints);
 
