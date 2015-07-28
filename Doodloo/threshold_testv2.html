@@ -8,6 +8,12 @@
   <script type="text/javascript" src="js/convexHull.js"></script>
   <script type="text/javascript" src="js/drawSVG.js"></script>
   <script type="text/javascript" src="js/FindBlob.js"></script> 
+  
+  <style type="text/css">
+      body {
+          margin: 0;
+      }
+  </style>
 </head>
 
 <body>
@@ -18,6 +24,7 @@
 <!-- <button id='extract'>Extract</button> -->
 <br>
 <canvas id='viewport' style='border:1px solid #AAA;display:block;'></canvas>
+<iframe src="game.html" height="600" width="800">game not available</iframe>
 <script>
 
 
@@ -137,13 +144,14 @@ function imgTesting_onload() {
     // Drawing the polyline
     var poly = convexHull(labelMap);
     drawSVG(poly, height, width);
-    drawSecondSVG(poly);
+    // drawSecondSVG(poly);
 
 }
 
 myImg.onload = CreateDelegate(myImg, imgTesting_onload);
 myImg.src =  "img/hand_drawn_circle.png";
 
+// var game = new Phaser.Game(800, 600, Phaser.AUTO, '', { preload: preload, create: create, update: update });
 
 // get the x,y coordinates for a given pixel index when provided with the width of the image
 
